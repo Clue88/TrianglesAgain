@@ -20,6 +20,8 @@ public class Tester {
         err += check("t2.classify()", t2.classify(), "isosceles");
         err += check("t3.classify()", t3.classify(), "equilateral");
         err += check("t3.toString()", t1.toString(), "v1(1.0, 2.0) v2(8.0, 3.0) v3(15.0, -3.0)");
+        t2.setVertex(1, p4);
+        err += check("t2.toString()", t2.toString(), "v1(0.0, 0.0) v2(15.0, -3.0) v3(0.0, 1.0)");
 
         if (err == 0) System.out.println("All good!");
         else if (err == 1) System.out.println("Uh oh... 1 error found.");
