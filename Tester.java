@@ -8,6 +8,8 @@ public class Tester {
         err += check("p1.getX()", p1.getX(), 1.0);
         err += check("p2.getY()", p2.getY(), 2.0);
         err += check("p1.distanceTo(p3)", p1.distanceTo(p3), 4.47213595499958);
+        err += check("p1.equals(p2)", p1.equals(p2), true);
+        err += check("p1.equals(p3)", p1.equals(p3), false);
 
         if (err == 0) System.out.println("All good!");
         else if (err == 1) System.out.println("Uh oh... 1 error found.");
