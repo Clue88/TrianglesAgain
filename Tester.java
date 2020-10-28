@@ -4,6 +4,8 @@ public class Tester {
         Point p1 = new Point(1, 2);
         Point p2 = new Point(p1);
         Point p3 = new Point(5, 4);
+        Point p4 = new Point(10, 5);
+        Triangle t1 = new Triangle(p1, p3, p4);
 
         err += check("p1.getX()", p1.getX(), 1.0);
         err += check("p2.getY()", p2.getY(), 2.0);
