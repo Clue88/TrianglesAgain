@@ -6,6 +6,8 @@ public class Tester {
         Point p3 = new Point(8, 3);
         Point p4 = new Point(15, -3);
         Triangle t1 = new Triangle(p1, p3, p4);
+        Triangle t2 = new Triangle(0, 0, 1, 0, 0, 1);
+        Triangle t3 = new Triangle(0, 0, 4, 0, 2, 2 * Math.sqrt(3));
 
         err += check("p1.getX()", p1.getX(), 1.0);
         err += check("p2.getY()", p2.getY(), 2.0);
@@ -14,6 +16,9 @@ public class Tester {
         err += check("p1.equals(p3)", p1.equals(p3), false);
         err += check("t1.getPerimeter()", t1.getPerimeter(), 31.156681016476867);
         err += check("t1.getPerimeter()", t1.getArea(), 24.499999999999975);
+        err += check("t1.classify()", t1.classify(), "scalene");
+        err += check("t2.classify()", t2.classify(), "isosceles");
+        err += check("t2.classify()", t3.classify(), "equilateral");
 
         if (err == 0) System.out.println("All good!");
         else if (err == 1) System.out.println("Uh oh... 1 error found.");
