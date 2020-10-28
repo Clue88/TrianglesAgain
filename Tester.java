@@ -18,7 +18,8 @@ public class Tester {
         err += check("t1.getPerimeter()", t1.getArea(), 24.499999999999975);
         err += check("t1.classify()", t1.classify(), "scalene");
         err += check("t2.classify()", t2.classify(), "isosceles");
-        err += check("t2.classify()", t3.classify(), "equilateral");
+        err += check("t3.classify()", t3.classify(), "equilateral");
+        err += check("t3.toString()", t1.toString(), "v1(1.0, 2.0) v2(8.0, 3.0) v3(15.0, -3.0)");
 
         if (err == 0) System.out.println("All good!");
         else if (err == 1) System.out.println("Uh oh... 1 error found.");
