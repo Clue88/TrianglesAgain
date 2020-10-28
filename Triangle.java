@@ -17,4 +17,12 @@ public class Triangle {
     public double getPerimeter() {
         return v1.distanceTo(v2) + v2.distanceTo(v3) + v3.distanceTo(v1);
     }
+
+    public double getArea() {
+        double a = v1.distanceTo(v2);
+        double b = v2.distanceTo(v3);
+        double c = v3.distanceTo(v1);
+        double s = getPerimeter() / 2.0;
+        return Math.sqrt(s * (s-a) * (s-b) * (s-c));
+    }
 }
